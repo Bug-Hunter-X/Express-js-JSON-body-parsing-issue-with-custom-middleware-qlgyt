@@ -1,0 +1,3 @@
+# Express.js JSON Body Parsing Issue
+
+This repository demonstrates a common issue in Express.js applications where JSON request bodies are not parsed correctly when a custom middleware function is placed before `express.json()`.  The bug is caused by the order of middleware execution.  The solution involves ensuring that `express.json()` is called before any middleware that attempts to access `req.body`. 
